@@ -1,3 +1,8 @@
+![build](https://github.com/ltpitt/java-spring-boot-dogs-graphql-api/workflows/build/badge.svg)
+[![GitHub Issues](https://img.shields.io/github/issues-raw/ltpitt/java-spring-boot-graphql-dogs-api)](https://github.com/ltpitt/java-spring-boot-dogs-graphql-api/issues)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
+
 # Java Spring Boot Dogs GraphQL API
 > A Dog Rest Api written using Spring Boot and GraphQL
 
