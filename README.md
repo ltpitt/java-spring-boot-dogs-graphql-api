@@ -17,6 +17,29 @@
 
 - Clone this repo locally
 - Open the project with IntelliJ IDEA
+- Run the project
+- Open [GraphiQL](http://localhost:8081/graphiql)
+
+Run the following example queries:
+
+```
+query {findAllDogs {
+  id
+  name
+  breed
+  origin
+}}
+```
+
+```
+query {
+  findDogById(id: 1) {
+    id
+    breed
+  }
+}
+```
+
 
 ## Meta
 
