@@ -10,7 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - <<: *setup-java
+      - name: Set up JDK 21
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '21'
       - name: Build with Maven
         run: mvn clean compile install -DskipTests --file pom.xml
 
@@ -18,7 +22,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - <<: *setup-java
+      - name: Set up JDK 21
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '21'
       - name: Run unit tests
         run: mvn test --file pom.xml
 
@@ -26,7 +34,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - <<: *setup-java
+      - name: Set up JDK 21
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '21'
       - name: Maven Package
         run: mvn -B clean package -DskipTests
 
@@ -34,14 +46,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - <<: *setup-java
+      - name: Set up JDK 21
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '21'
       - name: Maven Verify
         run: mvn -B clean verify
-
-# Define the setup-java step as an anchor
-setup-java: &setup-java
-  name: Set up JDK 21
-  uses: actions/setup-java@v3
-  with:
-    distribution: 'temurin'
-    java-version: '21'
