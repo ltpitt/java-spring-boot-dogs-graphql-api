@@ -68,3 +68,4 @@ class QueryTest {
         assertEquals("Dog Not Found", exception.getMessage());
         verify(dogRepository, times(1)).findById(1L);
     }
+}
